@@ -1,0 +1,13 @@
+nav {
+	background-color: #FFB4B0;
+	border: 2px solid black;
+	height: 60px;
+	margin: 0 20% 0 20%;
+}
+
+li {
+    float: left;
+    list-style-type: none;
+    margin: 5px 15px 0 15px;
+    font-family: "Arial";
+}
