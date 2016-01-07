@@ -1,3 +1,5 @@
+/*nav bar*/
+
 nav {
 	background-color: #FFB4B0;
 	border: 2px solid black;
@@ -8,6 +10,50 @@ nav {
 li {
     float: left;
     list-style-type: none;
-    margin: 5px 15px 0 15px;
+    margin: 5px 5px 0 5px;
     font-family: "Arial";
+}
+
+/*side bar*/
+
+#sidebar {
+	border: 2px solid black;
+	background-color: #4DD7FA;
+	float: left;
+	width: 23%;
+	height: 300px;
+	
+}
+
+.selectors {
+	padding: 10px 10px 10px 10px;
+}
+
+.selectors > label {
+	display: block;
+}
+
+
+#filter {
+	margin-left: 40%;
+	margin-top: 10%;
+}
+
+fieldset {
+	border-style: none;
+}
+
+.checkboxButtons1 {
+	display: inline-block;
+	margin-right: 2%;
+}
+
+.checkboxButtons2 {
+	display: inline-block;
+	margin-left: 10%;
+}
+
+#filter {
+	width: 60px;
+	height: 20px;
 }
