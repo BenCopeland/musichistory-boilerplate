@@ -6,63 +6,67 @@
   <title>Music History</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<nav>
-	<ul>
-		<li>
-			<a href="">View Music</a>
-		</li>
-		<li>|</li>
-		<li>
-			<a href="">Add Music</a>
-		</li>
-		<li>|</li>
-		<li>
-			<a href="">Profile</a>
-		</li>
-	</ul>
-</nav>
 
-<body>
-	
-	<div id="sidebar">
+	<div class="container1">
 
-		<label for="slider1">Song Length</label>
-		<input id="slider1" type="range" min="0" max="500" step="100" />
+		<nav>
+			<ul>
+				<li>
+					<a href="">View Music</a>
+				</li>
+				<li>|</li>
+				<li>
+					<a href="">Add Music</a>
+				</li>
+				<li>|</li>
+				<li>
+					<a href="">Profile</a>
+				</li>
+			</ul>
+		</nav>
 
-		<div class="selectors">
-		    <label for="artist">Artist:</label>
-			<select id="artist" name="Artist">
-				<option value="">sample artist 1</option>
-			  	<option value="">sample artist 2</option>
-			  	<option value="">sample artist 3</option>
-			</select>
-		</div>
-		<div class="selectors">
-			<label for="album">Album:</label>
-			<select id="album" name="Album">
-				<option value="">sample album 1</option>
-				<option value="">sample album 2</option>
-				<option value="">sample album 3</option>
-			</select>
-		</div>
+		<body>
+			
+			<div id="sidebar">
 
-	 <form method="post">
-	 	<fieldset class="radioButtons">
-	 		<legend>Genre:</legend>
-	 			<div class="checkboxButtons1">
-	 				<input type="checkbox" name="" value=""/>Rock<br/>
-	 				<input type="checkbox" name="" value=""/>Classical<br/>
-	 				<input type="checkbox" name="" value=""/>Pop<br/>
-	 			</div>
-	 			<div class="checkboxButtons2">
-	 				<input type="checkbox" name="" value=""/>Jazz<br/>
-	 				<input type="checkbox" name="" value=""/>Blues<br/>
-	 				<input type="checkbox" name="" value=""/>Hip Hop<br/>
-	 		    </div>
-		</fieldset>
+				<label for="slider1">Song Length</label>
+				<input id="slider1" type="range" min="0" max="500" step="100" />
 
-		<button id="filter" type="">Filter</button>
+				<div class="selectors">
+				    <label for="artist">Artist:</label>
+					<select id="artist" name="Artist">
+						<option value="">sample artist 1</option>
+					  	<option value="">sample artist 2</option>
+					  	<option value="">sample artist 3</option>
+					</select>
+				</div>
+				<div class="selectors">
+					<label for="album">Album:</label>
+					<select id="album" name="Album">
+						<option value="">sample album 1</option>
+						<option value="">sample album 2</option>
+						<option value="">sample album 3</option>
+					</select>
+				</div>
 
-	</div>
-</body>
+			 <form method="post">
+			 	<fieldset class="radioButtons">
+			 		<legend>Genre:</legend>
+			 			<div class="checkbox1">
+			 				<input type="checkbox" name="" value=""/>Rock<br/>
+			 				<input type="checkbox" name="" value=""/>Classical<br/>
+			 				<input type="checkbox" name="" value=""/>Pop<br/>
+			 			</div>
+			 			<div class="checkbox2">
+			 				<input type="checkbox" name="" value=""/>Jazz<br/>
+			 				<input type="checkbox" name="" value=""/>Blues<br/>
+			 				<input type="checkbox" name="" value=""/>Hip Hop<br/>
+			 		    </div>
+				</fieldset>
+
+				<button id="filter" type="">Filter</button>
+
+			</div>
+		</body>
+	</div> <!-- container 1 -->
 </html>
