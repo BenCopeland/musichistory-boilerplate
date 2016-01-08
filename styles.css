@@ -2,7 +2,7 @@
 
 .container1 {
 	border: 0 40px;
-	display: none;
+	display:;
 }
 
 /*nav bar*/
@@ -11,7 +11,7 @@ nav {
 	background-color: #FFB4B0;
 	border: 2px solid black;
 	height: 60px;
-	/*margin: 0 20% 0 20%;*/
+	margin: 0 20% 0 20%;
 }
 
 li {
@@ -51,13 +51,13 @@ fieldset {
 }
 
 .checkbox1 {
-	/*display: inline-block;*/
+	display: inline-block;
 	float: left;
 	margin-right: 2%;
 }
 
 .checkbox2 {
-	/*display: inline-block;*/
+	display: inline-block;
 	float: right;
 	margin-left: 10%;
 }
