@@ -7,68 +7,79 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 	<body>
-	<nav>
-		<ul>
-			<li>
-				<a href="">View Music</a>
-			</li>
-			<li>|</li>
-			<li>
-				<a href="">Add Music</a>
-			</li>
-			<li>|</li>
-			<li>
-				<a href="">Profile</a>
-			</li>
-		</ul>
-	</nav>
-		<div class="wrapper1">
-			<div id="sidebar">
-				<label for="slider1">Song Length</label>
-				<input id="slider1" type="range" min="0" max="500" step="100" />
-				<div class="selectors">
-				    <label for="artist">Artist:</label>
-					<select id="artist" name="Artist">
-						<option value="">sample artist 1</option>
-					  	<option value="">sample artist 2</option>
-					  	<option value="">sample artist 3</option>
-					</select>
-				</div>
-				<div class="selectors">
-					<label for="album">Album:</label>
-					<select id="album" name="Album">
-						<option value="">sample album 1</option>
-						<option value="">sample album 2</option>
-						<option value="">sample album 3</option>
-					</select>
-				</div>
-				<form method="post">
-			 	<fieldset class="radioButtons">
-			 		<legend>Genre:</legend>
-			 			<div class="checkbox1">
-			 				<input type="checkbox" name="" value=""/>Rock<br/>
-			 				<input type="checkbox" name="" value=""/>Classical<br/>
-			 				<input type="checkbox" name="" value=""/>Pop<br/>
-			 			</div>
-			 			<div class="checkbox2">
-			 				<input type="checkbox" name="" value=""/>Jazz<br/>
-			 				<input type="checkbox" name="" value=""/>Blues<br/>
-			 				<input type="checkbox" name="" value=""/>Hip Hop<br/>
-			 		    </div>
-				</fieldset>
-				<button id="filter" type="">Filter</button>
-			</div> <!-- sidebar -->
-			<div id="theMeat">
-				<h2>Song Name</h2>
-				<p>Artist Name | Album Name | Genre</p>
-				<h2>Song Name</h2>
-				<p>Artist Name | Album Name | Genre</p>
-				<h2>Song Name</h2>
-				<p>Artist Name | Album Name | Genre</p>
-				<h2>Song Name</h2>
-				<p>Artist Name | Album Name | Genre</p>
-			</div> <!-- themeat -->
-		</div> <!-- wrapper1 -->
-	</body>
 
+
+		<nav>
+			<ul>
+				<li>
+					<a id="list-music">List Music</a>
+				</li>
+				<li>|</li>
+				<li>
+					<a id="add-music">Add Music</a>
+				</li>
+			</ul>
+		</nav>
+
+		<section class="visible" id="list-view">
+			<div class="wrapper1">
+				<div id="sidebar">
+					<label for="slider1">Song Length</label>
+					<input id="slider1" type="range" min="0" max="500" step="100" />
+					<div class="selectors">
+					    <label for="artist">Artist:</label>
+						<select id="artist" name="Artist">
+							<option value="">sample artist 1</option>
+						  	<option value="">sample artist 2</option>
+						  	<option value="">sample artist 3</option>
+						</select>
+					</div>
+					<div class="selectors">
+						<label for="album">Album:</label>
+						<select id="album" name="Album">
+							<option value="">sample album 1</option>
+							<option value="">sample album 2</option>
+							<option value="">sample album 3</option>
+						</select>
+					</div>
+					<form method="post">
+					 	<fieldset class="radioButtons">
+					 		<legend>Genre:</legend>
+					 			<div class="checkbox1">
+					 				<input type="checkbox" name="" value=""/>Rock<br/>
+					 				<input type="checkbox" name="" value=""/>Classical<br/>
+					 				<input type="checkbox" name="" value=""/>Pop<br/>
+					 			</div>
+					 			<div class="checkbox2">
+					 				<input type="checkbox" name="" value=""/>Jazz<br/>
+					 				<input type="checkbox" name="" value=""/>Blues<br/>
+					 				<input type="checkbox" name="" value=""/>Hip Hop<br/>
+					 		    </div>
+						</fieldset>
+						<button id="filter" type="">Filter</button>
+					</form>
+				</div> <!-- sidebar -->
+
+
+				<div id="theMeat">
+				</div> <!-- themeat -->
+			</div> <!-- wrapper1 -->
+		</section>
+
+
+		<section id="add-view">
+				<p>Song name: <input type="text" id="songName"></p>
+				<p>Artist: <input type="text" id="artistName"></p>
+				<p>Album: <input type="text" id="albumName"></p>
+				<input type="button" id="addBtn" value="Add">
+		</section>
+	</body>
+<script type="text/javascript" src="song.js"></script>
 </html>
+
+
+
+
+
+
+

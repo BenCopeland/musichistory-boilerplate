@@ -11,7 +11,7 @@ nav {
 	background-color: #FFB4B0;
 	border: 2px solid black;
 	height: 60px;
-	margin: 0 20% 0 20%;
+	margin: 0 0 10px 0;
 }
 
 li {
@@ -72,9 +72,26 @@ fieldset {
 #theMeat {
 	border: 2px solid black;
 	background-color: #FEFAC0;
-	font-size: small;
+/*	font-size: small;*/
 	margin-right: 0;
 	float: right;
 	width: 74%;
 	height: 300px;
 }
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
