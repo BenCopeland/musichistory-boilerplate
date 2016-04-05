@@ -21,9 +21,12 @@ for (var i = 0; i < songs.length; i++) {
 
 //iterating through songs array, inserting content to DOM
 var songText = document.getElementById("theMeat");
-for (var i = 0; i < songs.length; i++) {
+var populate = function(){
+	for (var i = 0; i < songs.length; i++) {
 	songText.innerHTML += "<p>" + songs[i] + "</p>";
-}
+	}
+};
+populate();
 
 //targeting add and list link anchor elements in DOM
 var addLink = document.getElementById("add-music");
@@ -41,12 +44,66 @@ addLink.addEventListener("click", function() {
 		listView.add("hidden");
 	};
 });
-listLink.addEventListener("click", function() {
+listLink.addEventListener("click", function(){
 	if (listView == "hidden"){
 		listView.remove("hidden"),
 		addView.add("hidden");
 	};
 });
+
+//new song added to dom and then the global array of songs
+var addSong = function(newSong){
+	songText.innerHTML += "<p>" + newSong + "</p>";
+	var songsEdit = songs.concat(newSong);
+	songs = songsEdit;
+	//toggles list view to display upon adding content to DOM and original array
+	if (listView == "hidden"){
+		listView.remove("hidden"),
+		addView.add("hidden");
+	};
+};
+
+//targeting add button
+var addBtn = document.getElementById("addBtn");
+
+addBtn.addEventListener("click", function() {
+	var usrSong = [];
+	var song = document.getElementById("songName").value;
+	var artist = document.getElementById("artistName").value;
+	var album = document.getElementById("albumName").value;
+	//if statement determines whether all input fields have a value before adding new content to DOM/array
+	if (song.length > 0 && artist.length > 0 && album.length > 0) {
+		usrSong.push(song + " - by " + artist + " on the album " + album);
+		addSong(usrSong);
+	} else {
+		alert("You must enter text into all fields to continue");
+	};
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

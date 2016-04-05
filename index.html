@@ -68,10 +68,19 @@
 
 
 		<section class="hidden" id="add-view">
-				<p>Song name: <input type="text" id="songName"></p>
-				<p>Artist: <input type="text" id="artistName"></p>
-				<p>Album: <input type="text" id="albumName"></p>
-				<input type="button" id="addBtn" value="Add">
+			<form>
+				<div class="left-col-add">
+					<p>Song name:</p>
+					<p>Artist:</p>
+					<p>Album:</p>
+				</div>
+				<div class="right-col-add">
+					<p><input type="text" id="songName"></p>
+					<p><input type="text" id="artistName"></p>
+					<p><input type="text" id="albumName"></p>
+				</div>
+				<div class="btnWrap"><input type="reset" id="addBtn" value="Add"></div>
+			</form>
 		</section>
 	</body>
 <script type="text/javascript" src="song.js"></script>
