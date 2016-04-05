@@ -67,19 +67,25 @@ fieldset {
 	height: 20px;
 }
 
-/*the meat*/
+/*wrapper/output for content, aka "the meat"*/
 
 #theMeat {
 	border: 2px solid black;
 	background-color: #FEFAC0;
-/*	font-size: small;*/
 	margin-right: 0;
+	padding: 12px 0 12px 0;
 	float: right;
 	width: 74%;
-	height: 300px;
+	height: 100%;
 }
 
-/**/
+#theMeat > p {
+	margin-left: 16px;
+	padding: 1.6px 0 1.6px 0;
+}
+
+/*hide and show styling for list and add toggle*/
+
 .visible {
   display: block;
 }
@@ -87,6 +93,28 @@ fieldset {
 .hidden {
   display: none;
 }
+
+/* Add view styling */
+
+.left-col-add {
+	width: 49%;
+	margin: 3px 1% 0 0;
+	text-align: right;
+	float: left;
+}
+
+.right-col-add {
+	width: 49%;
+	margin-left: 1%;
+	text-align: left;
+	float: right;
+}
+
+.btnWrap {
+	text-align: center;
+}
+
+
 
 
 
