@@ -1,20 +1,21 @@
-function deleteSong(event) {
-		
+//delete button function
+function deleteSong(event) {	
 	// Handle the click event on any DOM element with a certain class
 	if (event.target.className === "deleteButton") {
 	event.target.parentNode.remove();
   }
 }
+//event listener for delete song button
 document.querySelector("div").addEventListener("click", deleteSong);
 
-var songText = document.getElementById("theMeat");
 
+//function that parses 1st json file and populates DOM with 1st json file upon loading the page
 function executeThisCodeAfterFileIsLoaded () {
 	var songData = "";
 	var currentSong;
 	var songText = document.getElementById("theMeat");
 	var data = JSON.parse(this.responseText);
-
+	//iterates through data and builds individual song blocks
 	for (var i = 0; i < data.song.length; i++) {
 		currentSong = data.song[i];
 		songData += `<div class="songBlock">`;
@@ -23,13 +24,47 @@ function executeThisCodeAfterFileIsLoaded () {
 		songData += `<button class="deleteButton">Delete</button>`;
 		songData += `</div>`
 	};
+	//area created as 2nd json file's output
+	songData += `<div id="moreMeat"></div>`
+	//more button
+	songData += `<button class="moreButton">More ></button>`
+	//populates DOM
 	songText.innerHTML = songData;
 };
-
+//XHR request for 1st json file to be appended to DOM upon load
 var songRequest = new XMLHttpRequest();
 songRequest.addEventListener("load", executeThisCodeAfterFileIsLoaded);
 songRequest.open("GET", "songs.json");
 songRequest.send();
+
+
+//event listener for more button
+document.querySelector("div").addEventListener("click", executeThisCodeWhenMoreIsClicked);
+//function that parses 2nd json file and appends it to DOM upon clicking more button
+function executeThisCodeWhenMoreIsClicked (event) {
+	if (event.target.className === "moreButton") {
+		var songData = "";
+		var currentSong;
+		var songText = document.getElementById("moreMeat");
+		var data = JSON.parse(moreSongsRequest.responseText);
+		//iterates through data and builds individual song blocks
+		for (var i = 0; i < data.song.length; i++) {
+			currentSong = data.song[i];
+			songData += `<div class="songBlock">`;
+			songData += `<h4>${currentSong.title}</h4>`;
+			songData += `<p>${currentSong.artist}</p><p>|</p><p>${currentSong.album}</p><p>|</p><p>${currentSong.genre}</p>`;
+			songData += `<button class="deleteButton">Delete</button>`;
+			songData += `</div>`
+		};
+		//appends new data to DOM
+		songText.innerHTML = songData;
+	};
+};
+//XHR request for 2nt json file to be appended to DOM upon click of more button
+var moreSongsRequest = new XMLHttpRequest();
+moreSongsRequest.open("GET", "moreSongs.json");
+moreSongsRequest.send();
+
 
 
 
