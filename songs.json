@@ -1,0 +1,53 @@
+{
+	"song": [
+		{
+			"title": "Legs",
+			"artist": "ZZTop",
+			"album": "Eliminator",
+			"genre": "Rock"
+		},
+		{
+			"title": "The Logical Song",
+			"artist": "Supertramp",
+			"album": "Breakfast in America",
+			"genre": "Rock"
+		},
+		{
+			"title": "Another Brick in the Wall",
+			"artist": "Pink Floyd",
+			"album": "The Wall",
+			"genre": "Rock"
+		},
+		{
+			"title": "Welcome to the Jungle",
+			"artist": "Guns & Roses",
+			"album": "Appetite for Destruction",
+			"genre": "Rock"
+		},
+		{
+			"title": "Ironic",
+			"artist": "Alanis Morisette",
+			"album": "Jagged Little Pill",
+			"genre": "Rock"
+		},
+		{
+			"title": "Untouchable",
+			"artist": "PushaT",
+			"album": "Darkest Before Dawn",
+			"genre": "Hip Hop"
+		},
+		{
+			"title": "Paradise",
+			"artist": "Big Sean",
+			"album": "Dark Sky Paradise",
+			"genre": "Hip Hop"
+		},
+		{
+			"title": "A Light in the Addict",
+			"artist": "Action Bronson",
+			"album": "Mr. Wonderful",
+			"genre": "Hip Hop"
+		}
+
+	]
+}

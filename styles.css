@@ -42,8 +42,7 @@ li {
 
 
 #filter {
-	margin-left: 40%;
-	margin-top: 10%;
+	margin: 0 35% 0 35%;
 }
 
 fieldset {
@@ -51,15 +50,17 @@ fieldset {
 }
 
 .checkbox1 {
+	width: 50%;
 	display: inline-block;
 	float: left;
-	margin-right: 2%;
-}
+/*	margin-right: 2%;
+*/}
 
 .checkbox2 {
+	width: 50%;
 	display: inline-block;
 	float: right;
-	margin-left: 10%;
+/*	margin-left: 10%;*/
 }
 
 #filter {
@@ -73,16 +74,31 @@ fieldset {
 	border: 2px solid black;
 	background-color: #FEFAC0;
 	margin-right: 0;
-	padding: 12px 0 12px 0;
+/*	padding: 12px 0 12px 0;*/
 	float: right;
 	width: 74%;
 	height: 100%;
 }
 
-#theMeat > p {
+.songBlock {
+	margin: 10px 0 15px 10px;
+	font-family: "Arial";
+}
+
+.songBlock > h4 {
+	margin: 0 0 0 1.5%;
+}
+
+.songBlock > p {
+	margin: 5px 1.5% 0 1.5%;
+	display: inline-block;
+	font-size: small;
+}
+
+/*#theMeat > p {
 	margin-left: 16px;
 	padding: 1.6px 0 1.6px 0;
-}
+}*/
 
 /*hide and show styling for list and add toggle*/
 
