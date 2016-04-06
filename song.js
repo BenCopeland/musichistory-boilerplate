@@ -1,4 +1,4 @@
-//delete button function
+//delete button function deleted individual song blocks
 function deleteSong(event) {	
 	// Handle the click event on any DOM element with a certain class
 	if (event.target.className === "deleteButton") {
