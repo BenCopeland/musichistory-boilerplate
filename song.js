@@ -32,7 +32,6 @@ function executeThisCodeAfterFileIsLoaded () {
 	//populates DOM
 	songText.innerHTML = songData;
 };
-console.log(globalData);
 //XHR request for 1st json file to be appended to DOM upon load
 var songRequest = new XMLHttpRequest();
 songRequest.addEventListener("load", executeThisCodeAfterFileIsLoaded);
@@ -95,8 +94,9 @@ addBtn.addEventListener("click", function() {
 		var songText = document.getElementById("theMeat");
 		var moreText = document.getElementById("moreMeat");
 		var addText = document.getElementById("addMeat");
+		//determines where to insert the new songs
+		//if only the 1st json file has been loaded it appends to the end of that cluster
 		if (moreText.innerHTML.length == 0){
-			console.log("more meat DOES NOT exist");
 			var songData = "";
 			songData += `<div class="songBlock">`;
 			songData += `<h4>${usrSongObj.title}</h4>`;
@@ -107,7 +107,7 @@ addBtn.addEventListener("click", function() {
 			listView.remove("hidden"),
 			addView.add("hidden");
 		} else {
-			console.log("more meat DOES exist");
+			//if both have been loaded it appends new song to the end of the more songs
 			var songData = "";
 			songData += `<div class="songBlock">`;
 			songData += `<h4>${usrSongObj.title}</h4>`;
@@ -119,6 +119,7 @@ addBtn.addEventListener("click", function() {
 			addView.add("hidden");
 		}
 	} else {
+		//alert fires if input fields have not all been filled out
 		alert("Fill the whole thing out ya dingus!");
 	};
 })
