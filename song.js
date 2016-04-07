@@ -27,7 +27,7 @@ function executeThisCodeAfterFileIsLoaded () {
 	songData += `<div id="addMeat"></div>`
 	//area created as 2nd json file's output location
 	songData += `<div id="moreMeat"></div>`
-	//more button
+	//more button added
 	songData += `<button class="moreButton">More ></button>`
 	//populates DOM
 	songText.innerHTML = songData;
@@ -63,7 +63,7 @@ function executeThisCodeWhenMoreIsClicked (event) {
 		//appends new data to DOM
 		moreText.innerHTML = moreData;
 		} else {
-			//alert fires if the 
+			//alert fires if user hits the more button more than once
 			alert("You've already got it all ya dingus. Add some songs if you still want more.");
 		};
 	};
@@ -82,13 +82,13 @@ addBtn.addEventListener("click", function() {
 	var artist = document.getElementById("artistName").value;
 	var album = document.getElementById("albumName").value;
 	var genre = document.getElementById("genreName").value;
+	//object for user input
 	var usrSongObj = {
 			"title": song,
 			"artist": artist,
 			"album": album,
 			"genre": genre
 	};
-	console.log(usrSongObj);
 	//determines whether all input fields have a value before adding new content to DOM/array
 	if (song.length > 0 && artist.length > 0 && album.length > 0 && genre.length > 0) {
 		var songText = document.getElementById("theMeat");
